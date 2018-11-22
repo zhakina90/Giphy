@@ -1,0 +1,16 @@
+body {
+  width: 980px;
+  background-color: blue;
+}
+.buttons {
+  margin-top: 50px;
+}
+.container {
+  position: relative;
+}
+label {
+  color: black;
+  font-size: 40px;
+  text-shadow: 1 1 4 px #ff0000de;
+  margin-right: 10px;
+}
