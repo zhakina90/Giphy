@@ -1,4 +1,4 @@
-$("button").on("click", function() {
+$("body").on("click", "button", function() {
   var art = $(this).attr("data-martial_art");
   var queryURL =
     "https://api.giphy.com/v1/gifs/search?q=" +
@@ -25,7 +25,6 @@ $("button").on("click", function() {
       divTag.prepend(gif);
       $("#gifs").prepend(divTag);
     }
-    console.log();
   });
 });
 $(document).on("click", "img", function() {
@@ -41,10 +40,12 @@ $(document).on("click", "img", function() {
     $(this).attr("data-state", "still");
   }
 });
-$("#new-button").on("click", function(event) {
+function renderButtons() {
+  $("#new-buttons").emty();
+}
+$("#art-form").submit(function(event) {
   event.preventDefault();
-  var newArt = $(".art-input")
-    .val()
-    .trim();
-  art.push(newArt);
+  userArt = $("#art-input").val();
+
+  $(".buttons").append(`<button>${userArt}</button>`);
 });
