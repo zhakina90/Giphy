@@ -41,3 +41,10 @@ $(document).on("click", "img", function() {
     $(this).attr("data-state", "still");
   }
 });
+$("#new-button").on("click", function(event) {
+  event.preventDefault();
+  var newArt = $(".art-input")
+    .val()
+    .trim();
+  art.push(newArt);
+});
